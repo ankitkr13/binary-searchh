@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int firstOcc(vector<int> arr , int n , int ele)
+int lastOcc(vector<int> arr , int n , int ele)
 {
 	int start = 0;
 	int end = n-1;
@@ -35,7 +35,7 @@ int main()
 	}
 	int ele;
 	cin>>ele;
-	int index_of_element = firstOcc(arr , n , ele);
+	int index_of_element = lastOcc(arr , n , ele);
 	cout<<index_of_element;
 	return 0;
 }
