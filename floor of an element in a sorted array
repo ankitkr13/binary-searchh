@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int floor(vector<int> arr , int n , int ele)
+{
+	int start = 0;
+	int end = n-1;
+	int res = -1;
+	while(start<=end)
+	{int mid = start +(end - start)/2;
+	
+	 if(ele > arr[mid])
+		{ res = arr[mid];
+			start  = mid+1;
+		}
+		else 
+		end = mid -1;
+		
+	}
+	return res;
+}
+int main()
+{
+	int n;
+	cin>>n;
+	vector<int> arr(n ,0);
+	for(int i = 0;i<n;i++)
+	{
+		cin>>arr[i];
+	}
+	int ele;
+	cin>>ele;
+	int floorvalue = floor(arr , n , ele);
+	cout<<floorvalue;
+	return 0;
+}
